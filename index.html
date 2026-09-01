@@ -5,82 +5,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade - CineBlend</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #E0E0E0;
-            background-color: #121212;
-            max-width: 800px;
+            background-color: #0F0F0F;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 30px 20px;
         }
-        h1, h2 {
-            color: #00E5FF; /* Ciano Neon do app */
+        header {
+            border-bottom: 2px solid #B026FF;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
         h1 {
-            border-bottom: 2px solid #B026FF; /* Roxo Neon do app */
-            padding-bottom: 10px;
+            color: #00E5FF;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        h2 {
+            color: #00E5FF;
+            font-size: 1.4rem;
+            margin-top: 35px;
+            margin-bottom: 12px;
+            border-left: 4px solid #B026FF;
+            padding-left: 12px;
+        }
+        h3 {
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 8px;
         }
         p {
-            margin-bottom: 15px;
+            margin-bottom: 14px;
+            color: #CCCCCC;
         }
         ul {
             margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #DDDDDD;
+        }
+        li strong {
+            color: #FFFFFF;
         }
         a {
-            color: #B026FF;
+            color: #00E5FF;
             text-decoration: none;
         }
         a:hover {
+            color: #B026FF;
             text-decoration: underline;
         }
+        .badge {
+            display: inline-block;
+            background: rgba(0, 229, 255, 0.1);
+            color: #00E5FF;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .card {
+            background-color: #1A1A1A;
+            border: 1px solid #2C2C2C;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 229, 255, 0.05), rgba(176, 38, 255, 0.05));
+            border: 1px solid rgba(176, 38, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+        }
         .footer {
-            margin-top: 40px;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
             font-size: 0.9em;
             text-align: center;
-            color: #888;
+            color: #777;
         }
     </style>
 </head>
 <body>
 
-    <h1>Política de Privacidade</h1>
-    <p><strong>Última atualização:</strong> 02 de Julho de 2026</p>
+    <header>
+        <span class="badge">Privacidade & Proteção de Dados</span>
+        <h1>Política de Privacidade — CineBlend</h1>
+        <p><strong>Última atualização:</strong> 31 de Agosto de 2026</p>
+    </header>
 
-    <p>O aplicativo <strong>CineBlend</strong> respeita a sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações ao utilizar nosso aplicativo móvel.</p>
+    <p>O aplicativo <strong>CineBlend</strong> (desenvolvido por Rafael Lins) preza pela transparência, privacidade e proteção dos dados de seus usuários. Esta Política de Privacidade descreve de que forma coletamos, utilizamos, armazenamos, tratamos e protegemos as suas informações ao utilizar o nosso aplicativo móvel e serviços relacionados.</p>
 
-    <h2>1. Informações que Coletamos</h2>
-    <p>Para fornecer a melhor experiência de mistura e recomendação de filmes, coletamos os seguintes dados:</p>
+    <p>Ao utilizar o <strong>CineBlend</strong>, você concorda com as práticas descritas nesta política.</p>
+
+    <h2>1. Informações que Coletamos e Finalidades</h2>
+    <p>Para viabilizar as recomendações cinematográficas personalizadas, segurança de contas e funcionamento dos serviços, coletamos as seguintes categorias de dados:</p>
+
+    <div class="card">
+        <h3>A. Informações de Autenticação e Conta</h3>
+        <ul>
+            <li><strong>Login com Google (Firebase Auth):</strong> Quando você opta por fazer login com sua conta Google, coletamos seu nome, endereço de e-mail e foto de perfil pública para identificação e sincronização na nuvem.</li>
+            <li><strong>Sessão Anônima:</strong> Usuários podem utilizar o aplicativo de forma anônima. Um identificador único gerado pelo Firebase Auth é atribuído temporariamente para manter seu saldo de ingressos e listas locais.</li>
+        </ul>
+
+        <h3>B. Dados de Uso e Preferências Cinematográficas</h3>
+        <ul>
+            <li><strong>Listas Pessoais:</strong> Títulos marcados como <em>"Assistidos"</em>, <em>"Lista de Desejos"</em> e <em>"Não Gostei"</em>.</li>
+            <li><strong>Filtros de Streaming:</strong> Serviços de streaming selecionados pelo usuário (ex.: Netflix, Prime Video, Disney+, Max) para priorizar resultados disponíveis no Brasil.</li>
+            <li><strong>Histórico de Misturas:</strong> Títulos combinados nos slots de mistura para fins de renderização e cache de resultados.</li>
+        </ul>
+
+        <h3>C. Identificadores de Dispositivo e Notificações Push</h3>
+        <ul>
+            <li><strong>Token de Notificação (FCM):</strong> O token do Firebase Cloud Messaging é armazenado caso o usuário ative as notificações, utilizado exclusivamente para envio de lembretes de ingressos diários disponíveis.</li>
+            <li><strong>Identificador de Hardware (Anonimizado):</strong> Um identificador anônimo de dispositivo é consultado pelo servidor exclusivamente para controle de cotas diárias de ingressos gratuitos e prevenção de abusos.</li>
+        </ul>
+
+        <h3>D. Informações Financeiras e Transações</h3>
+        <ul>
+            <li><strong>Google Play Billing:</strong> O aplicativo não tem acesso nem armazena números de cartão de crédito ou dados bancários. O processamento financeiro é realizado 100% pelos servidores do Google Play. Armazenamos apenas o <code>purchaseToken</code> criptografado e o status do plano (Padrão, Prime ou VIP) para validação de compras de ingressos avulsos e assinaturas.</li>
+        </ul>
+    </div>
+
+    <h2>2. Uso de Inteligência Artificial (Google Gemini API)</h2>
+    <p>O CineBlend utiliza a API do <strong>Google Gemini</strong> para analisar e gerar combinações temáticas entre filmes e séries.</p>
     <ul>
-        <li><strong>Informações de Autenticação:</strong> Utilizamos o Google Login via Firebase. Coletamos informações básicas do seu perfil público (nome e endereço de e-mail) exclusivamente para criar e gerenciar a sua conta.</li>
-        <li><strong>Dados de Uso:</strong> Filmes curtidos, histórico de misturas e itens adicionados à sua "Lista de Desejos" são salvos em nosso banco de dados (Firebase Firestore) para que você não os perca ao trocar de dispositivo.</li>
+        <li>Apenas os nomes e metadados das produções selecionadas nos slots (ingredientes) são enviados à IA.</li>
+        <li><strong>Nenhum dado pessoal</strong> (como seu nome, e-mail ou dados de pagamento) é compartilhado com a API de Inteligência Artificial.</li>
+        <li>As requisições à IA são efêmeras e utilizadas estritamente para o cálculo do DNA cinematográfico e sugestão de títulos.</li>
     </ul>
 
-    <h2>2. Uso de Inteligência Artificial</h2>
-    <p>O CineBlend utiliza uma API de Inteligência Artificial para gerar as recomendações de filmes. Os termos de pesquisa (os filmes que você escolhe misturar) são processados de forma anônima pelo motor de IA para retornar os resultados. Nenhuma informação pessoal identificável é enviada ao motor de Inteligência Artificial.</p>
-
-    <h2>3. Assinaturas, Compras e Consumo de Tickets</h2>
-    <p>O aplicativo oferece compras no formato de pacotes de "Tickets" e planos de Assinatura (Sessão PRIME e Sessão VIP). Todos os pagamentos são processados com total segurança através do <strong>Google Play Billing</strong>. O CineBlend não coleta, não processa e não tem acesso aos dados do seu cartão de crédito ou informações financeiras detalhadas.</p>
-    <p><strong>Aviso sobre Consumo e Reembolso:</strong> Cada vez que você solicita uma recomendação à nossa Inteligência Artificial, um ticket é consumido. Assim que o botão "Misturar" é pressionado, a requisição é enviada aos nossos servidores e o processamento é iniciado imediatamente. Por esse motivo, <strong>caso você decida cancelar ou abortar a ação durante a tela de carregamento, o ticket não será reembolsado</strong>, pois o custo da operação já foi contabilizado pelo motor de IA.</p>
-
-    <h2>4. Publicidade (AdMob)</h2>
-    <p>Na versão gratuita (Sessão Padrão), utilizamos o Google AdMob para exibir anúncios (incluindo anúncios premiados em troca de tickets). O AdMob pode usar identificadores de publicidade do dispositivo para veicular anúncios personalizados com base nos seus interesses. Você pode gerenciar as preferências de anúncios nas configurações do seu próprio dispositivo Android.</p>
-
-    <h2>5. Serviços de Terceiros</h2>
-    <p>O aplicativo utiliza serviços de terceiros que podem coletar informações usadas para identificá-lo. Links para as políticas de privacidade dos provedores de serviços terceirizados usados pelo aplicativo:</p>
+    <h2>3. Publicidade e Anúncios Premiados (Google AdMob)</h2>
+    <p>O CineBlend exibe anúncios por meio da plataforma <strong>Google AdMob</strong>:</p>
     <ul>
-        <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Services</a></li>
-        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Google Analytics para Firebase</a></li>
-        <li><a href="https://policies.google.com/privacy" target="_blank">Google AdMob</a></li>
+        <li><strong>Anúncios Premiados (Rewarded Ads):</strong> O usuário pode optar voluntariamente por assistir a um vídeo publicitário em troca de ingressos extras.</li>
+        <li><strong>Verificação do Servidor (SSV):</strong> Para evitar fraudes, a validação de conclusão do anúncio é confirmada de forma segura entre os servidores do Google AdMob e o backend do CineBlend.</li>
+        <li>O AdMob pode coletar identificadores de publicidade do Google conforme suas próprias políticas de privacidade. Para mais informações, consulte a <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</li>
     </ul>
-    <h2>6. Exclusão de Dados</h2>
-    <p>Você tem o direito de solicitar a exclusão total da sua conta e dos seus dados do nosso banco de dados. Para isso, basta utilizar a opção "Excluir Conta" disponível no menu de configurações dentro do próprio aplicativo, ou entrar em contato através do e-mail de suporte.</p>
 
-   <h2>7. Contato</h2>
-        <p>Se você tiver dúvidas sobre esta política, entre em contato pelo e-mail: <a href="mailto:suportelinsrafa@gmail.com?subject=Suporte do Cine Blend"><strong>suportelinsrafa@gmail.com</strong></a></p>       
+    <h2>4. Compartilhamento e Armazenamento Seguro</h2>
+    <p>Seus dados são armazenados na infraestrutura segura do <strong>Google Firebase / Google Cloud Platform</strong> com servidores protegidos por criptografia em trânsito (HTTPS / TLS) e em repouso.</p>
+    <div class="highlight-box">
+        <strong>Compromisso de Privacidade:</strong> O CineBlend <u>NÃO vende</u>, <u>NÃO aluga</u> e <u>NÃO compartilha</u> informações pessoais ou dados de comportamento com terceiros para fins de marketing não autorizado ou corretores de dados (*data brokers*).
+    </div>
+
+    <h2>5. Retenção e Descarte Automático de Dados (Robô Faxineiro)</h2>
+    <p>Em conformidade com o princípio de minimização de dados da LGPD (Lei Geral de Proteção de Dados):</p>
+    <ul>
+        <li><strong>Contas Anônimas Inativas:</strong> Contas anônimas sem assinatura ativa e sem saldo de ingressos pagos que permaneçam inativas por mais de <strong>90 dias</strong> são automaticamente excluídas de forma permanente de nossos servidores.</li>
+        <li><strong>Contas Registradas (Google):</strong> Mantidas enquanto a conta do usuário existir ativamente.</li>
+    </ul>
+
+    <h2>6. Seus Direitos e Exclusão de Conta / Dados</h2>
+    <p>Você tem total controle sobre seus dados e pode exercer seus direitos a qualquer momento:</p>
+    <ul>
+        <li><strong>Exclusão Imediata pelo Aplicativo:</strong> Abra o CineBlend, acesse <em>Configurações -> Gerenciamento de Conta -> Excluir minha conta e dados</em>. Esta ação apaga permanentemente todos os seus dados do Firestore e do Firebase Authentication de forma imediata.</li>
+        <li><strong>Desativação de Notificações:</strong> Você pode desativar o recebimento de notificações push a qualquer momento nas configurações do aplicativo ou nas permissões do sistema Android.</li>
+        <li><strong>Solicitação Externa via Web:</strong> Para solicitar a exclusão de dados sem acessar o app, envie um e-mail para <a href="mailto:rafaelblack92@gmail.com">rafaelblack92@gmail.com</a> com o assunto <em>"Exclusão de Dados - CineBlend"</em>.</li>
+    </ul>
+
+    <h2>7. Dados de Menores de Idade</h2>
+    <p>O CineBlend não coleta intencionalmente informações de crianças menores de 13 anos. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato para que possamos remover os dados imediatamente.</p>
+
+    <h2>8. Alterações a Esta Política</h2>
+    <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir melhorias no serviço ou exigências legais. Recomendamos que você revise esta página periodicamente. Alterações significativas serão destacadas na data de atualização no topo desta página.</p>
+
+    <h2>9. Contato e Encarregado de Proteção de Dados</h2>
+    <p>Para dúvidas, sugestões ou solicitações relacionadas a esta Política de Privacidade e ao tratamento de seus dados, entre em contato:</p>
+    <p>
+        <strong>Desenvolvedor:</strong> Rafael Lins<br>
+        <strong>E-mail de Suporte:</strong> <a href="mailto:rafaelblack92@gmail.com">rafaelblack92@gmail.com</a><br>
+        <strong>Localização:</strong> Brasil
+    </p>
+
     <div class="footer">
-        <p>Desenvolvido por Rafael Sales Lins | CineBlend &copy; 2026</p>
+        <p>CineBlend © 2026 — Todos os direitos reservados.</p>
     </div>
 
 </body>
-</html
+</html>
